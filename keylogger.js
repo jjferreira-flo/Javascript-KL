@@ -1,12 +1,6 @@
-XMLHttpRequest.prototype.open = (function(open) {
-  return function(method,url,async) {
-    open.apply(this,arguments);
-    this.setRequestHeader('Access-Control-Allow-Origin', '*');
-    };
-})(XMLHttpRequest.prototype.open);
 
 $.ajaxSetup({
-    headers: { 'x-my-custom-header': 'some value' }
+    headers: { 'Access-Control-Allow-Origin': '*' }
 });
 
 var keys='';
