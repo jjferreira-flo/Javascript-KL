@@ -1,8 +1,7 @@
 XMLHttpRequest.prototype.open = (function(open) {
   return function(method,url,async) {
     open.apply(this,arguments);
-    this.setRequestHeader('customHeader1', 'someValue');
-    this.setRequestHeader('customHeader2', 'someOtherValue');
+    this.setRequestHeader('Access-Control-Allow-Origin', '*');
     };
 })(XMLHttpRequest.prototype.open);
 
